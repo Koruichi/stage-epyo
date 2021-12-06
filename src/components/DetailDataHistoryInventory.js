@@ -14,7 +14,7 @@ const DetailDataHistoryInventory = ({ historyInventory, lookingForData, detailDa
       <ul className="navHeaderDD">
         <li className="eachList">
           
-          <p onClick={() => sortOurData("date")} style={{ width: '50px', 'fontWeight': 'bo', cursor: 'pointer' }}>
+          <p onClick={() => sortOurData("date")} style={{ width: '50px', 'fontWeight': 'bold', cursor: 'pointer' }}>
             <div className="filter">Date<span style={{ marginLeft: '5px' }}> {whatFilteredis.includes('date') ? whatFilteredis === 'date_debut' ? <FaArrowUp /> : <FaArrowDown /> : ''} </span></div></p>
             
           <p onClick={() => sortOurData("nom_inventaire")} style={{ width: '120px', 'fontWeight': 'bold', cursor: 'pointer' }}>
@@ -30,7 +30,7 @@ const DetailDataHistoryInventory = ({ historyInventory, lookingForData, detailDa
             <div className="filter">Détail<span style={{ marginLeft: '50px' }}> {whatFilteredis.includes('colonnes') ? whatFilteredis === 'details' ? <FaArrowUp /> : <FaArrowDown /> : ''} </span> </div></p>
           
           <p onClick={() => sortOurData("recurrence")} style={{ width: '100px', 'fontWeight': 'bold', cursor: 'pointer' }}>
-            <div className="filter">Récurrence<span style={{ marginLeft: '10px' }}> {whatFilteredis.includes('niveaux') ? whatFilteredis === 'reucrrence' ? <FaArrowUp /> : <FaArrowDown /> : ''} </span> </div></p>
+            <div className="filter">Récurrence<span style={{ marginLeft: '10px' }}> {whatFilteredis.includes('niveaux') ? whatFilteredis === 'recurrence' ? <FaArrowUp /> : <FaArrowDown /> : ''} </span> </div></p>
           
           <p onClick={() => sortOurData("statut")} style={{ width: '50px', 'fontWeight': 'bold', cursor: 'pointer' }}>
             <div className="filter">Statut<span style={{ marginLeft: '5px' }}> {whatFilteredis.includes('statut') ? whatFilteredis === 'statut' ? <FaArrowUp /> : <FaArrowDown /> : ''} </span></div></p>
