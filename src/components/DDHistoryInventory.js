@@ -35,9 +35,8 @@ const DDHistoryInventory = ({ putStatutIntoState, getInventory, detailData, curr
           <NavLink onClick={() => changeFullscreen()} to="/inventoryDetails">
              <img src={fullscreen} className="imgFullscreen" width="80" height="80" style={{ marginTop: "0.5em", cursor: 'pointer' }}>
                </img></NavLink>
-               
+               <p>test commit</p>
                 </div>
-                
                 </h1>
         <DetailDataHistoryInventory />
    
