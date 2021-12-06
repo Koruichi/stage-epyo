@@ -1,0 +1,39 @@
+ .listWMS{
+    display: flex;
+    flex-direction: column;
+    margin-right: 2em;
+    margin-top: 2px;
+}
+
+.eachProduct{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #c9cbce; 
+    background-color: white;
+}
+
+.eachProduct p {
+    text-align: center;
+    flex-direction: column;
+} 
+
+.navHeader{    
+    margin-right: 2em;
+}
+
+h1{
+    text-align: center;
+    height: 50px;
+    background-color: #dae3f3;
+    vertical-align: middle; 
+    position: relative;
+}
+
+.centerPerfectly{
+    position: absolute; /* postulat de départ */
+    top: 50%; left: 50%; /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%); 
+    background-color: white;
+    border: 5px solid #71b6f3;
+}

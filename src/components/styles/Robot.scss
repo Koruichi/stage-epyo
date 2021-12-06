@@ -1,0 +1,111 @@
+.contentMission{    
+width: 100%;
+}
+
+.splitZones{
+    position: relative;
+    display:flex;
+    text-align: center;
+}
+
+.campaignZone img {
+    position: absolute;
+    left:1em;
+    margin-left: 2.7em;
+}
+
+.campaignZone{
+    width: 20%;
+    text-align: center;
+    margin: 0;
+    margin-right: 5px;
+    margin-left: 2em;
+    border-right: 2px solid #dae3f3;
+}
+
+.campaignZone h1{
+    width: 20%;
+    text-align: center;
+    margin : 0;
+    margin-left: 1em;
+    margin-right: 0.3em;  
+} 
+
+.separateElements{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: 50px;
+    background-color: #dae3f3; 
+    margin-left: 2em;   
+}
+
+h1{
+    margin-left: 2em;
+    margin-block-start: auto;
+}
+
+.titleEmplacements{
+    text-align: center;
+    height: 50px;
+    width: 80%;   
+    background-color: #dae3f3; 
+    vertical-align: middle; 
+    position: relative;
+    margin-left: 20%;
+    margin-right: 22%;    
+}
+
+.emplacements{
+    margin: 0;
+    position: relative;
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    margin-left: 20%;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 0.4em;
+}
+
+.resume{
+    border: 1px solid white; 
+    position: relative;
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    margin-left: 20%;
+}
+
+.emplacements li{
+    background-color: #dae3f3;
+    border: 1px solid white;
+    width: 11%;
+    display: inline-block;
+    margin:0;
+}
+
+.resume li{
+    background-color: #dae3f3;
+    border: 1px solid white;
+}
+
+.editer{
+    margin: auto; 
+    background-color : #556fe4;
+    color: white;
+    border: none;
+    width: 300px;
+    font-weight: bold;
+    font-size: 1.5em;
+    position:relative;
+    left:55%;
+  }
+
+  .iFullscreen{
+    position: absolute;
+	top: -15px; 
+    margin-right: 2em;
+    margin-left : -70px;
+  }
+

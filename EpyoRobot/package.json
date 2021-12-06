@@ -1,0 +1,23 @@
+{
+  "name": "epyo-robot",
+  "version": "1.0.0",
+  "description": "Epyo Robot",
+  "author": "Christelle",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "fast-csv": "^4.3.6",
+    "fs": "0.0.1-security",
+    "mongoose": "^6.0.8",
+    "mysql": "2.18.1",
+    "password-hash": "^1.2.2"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "license": "ISC"
+}

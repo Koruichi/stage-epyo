@@ -1,0 +1,50 @@
+.calcul{
+    margin: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;  
+    margin-top: 0.4em;
+}
+
+h4{
+    display: inline-block;
+    text-align: center;
+    vertical-align: center;
+    height: 30px;
+    background-color: #dae3f3;
+    border: 1px solid white;  
+    position: relative;
+    width: 100%;
+    margin: 0px;  
+}
+
+.pourcent{
+    color: #556fe4;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: right;
+    margin: 1px;
+  }
+
+.time{
+    color: grey;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: right;
+    margin: 1px;
+    position: relative;
+    right: 2em;
+}
+
+.timeby{
+    color: #556fe4;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: right;
+    margin: 1px;
+}
+
+.emp {
+    text-align: right;
+    margin: 0;
+}
