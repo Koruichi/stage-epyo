@@ -15,8 +15,19 @@ const DetailData = ({ detailData, showThisProduct, currentProduct, isItFullscree
           <p onClick={() => sortOurData("date_debut")} style={{ width: '50px', 'fontWeight': 'bold', cursor: 'pointer' }}>
             <div className="filter">Date<span style={{ marginLeft: '5px' }}> {whatFilteredis.includes('date_debut') ? whatFilteredis === 'date_debut' ? <FaArrowUp /> : <FaArrowDown /> : ''} </span></div></p>
           
-          <p onClick={() => sortOurData("zones")} style={{ width: '50px', 'fontWeight': 'bold' }}>
+
+
+
+          <p onClick={() => sortOurData("zones")} style={{ width: '50px', 'fontWeight': 'bold', cursor: 'pointer' }}>
+          
            <div className="filter"> Zone<span style={{ marginLeft: '5px' }}> {whatFilteredis.includes('zones') ? whatFilteredis === 'zones' ? <FaArrowUp /> : <FaArrowDown /> : ''} </span> </div></p>
+
+
+
+
+
+
+           
          
           <p onClick={() => sortOurData("cellules")} style={{ width: '50px', 'fontWeight': 'bold', cursor: 'pointer' }}>
             <div className="filter"> Cellule<span style={{ marginLeft: '5px' }}> {whatFilteredis.includes('cellules') ? whatFilteredis === 'cellules' ? <FaArrowUp /> : <FaArrowDown /> : ''} </span> </div></p>
