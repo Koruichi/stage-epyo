@@ -5,7 +5,7 @@ const dataMiddleware = (store) => (next) => (action) => {
   if (action.type === 'GET_INVENTORY') {
     var config = {
       method: 'get',
-      url: 'http://127.0.0.1:3333/inventories',
+      url: 'http://10.0.4.4:3333/inventories',
       headers: {}
     };
     axios(config)
@@ -66,7 +66,7 @@ const dataMiddleware = (store) => (next) => (action) => {
     if (state.whichInventoryIsSelected !== '') {
       var config = {
         method: 'get',
-        url: `http://127.0.0.1:3333/inventories/${state.whichInventoryIsSelected}`,
+        url: `http://10.0.4.4:3333/inventories/${state.whichInventoryIsSelected}`,
         headers: {}
       };
       axios(config)
@@ -83,7 +83,7 @@ const dataMiddleware = (store) => (next) => (action) => {
     if (state.whichInventoryIsSelected !== '') {
       var config = {
         method: 'get',
-        url: `http://127.0.0.1:3333/export/${state.whichInventoryIsSelected}`,
+        url: `http://10.0.4.4:3333/export/${state.whichInventoryIsSelected}`,
         headers: {}
       };
       axios(config)
@@ -100,7 +100,7 @@ const dataMiddleware = (store) => (next) => (action) => {
     if (state.whichProductIsSelected !== '') {
       var config = {
         method: 'get',
-        url: `http://127.0.0.1:3333/inventories/${state.whichProductIsSelected}`,
+        url: `http://10.0.4.4:3333/inventories/${state.whichProductIsSelected}`,
         headers: {}
       };
       axios(config)
@@ -116,7 +116,7 @@ const dataMiddleware = (store) => (next) => (action) => {
   else if (action.type === 'GET_EVERYTHING_FROM_WMS') {
     var config = {
       method: 'get',
-      url: `http://127.0.0.1:3333/wmsstock/${action.value}`,
+      url: `http://10.0.4.4:3333/wmsstock/${action.value}`,
       headers: {}
     };
     axios(config)
@@ -136,7 +136,7 @@ const dataMiddleware = (store) => (next) => (action) => {
     });
     var config = {
       method: 'post',
-      url: `http://127.0.0.1:3333/statut/${state.currentProduct.id_produit}`,
+      url: `http://10.0.4.4:3333/statut/${state.currentProduct.id_produit}`,
       headers: {
         'Content-Type': 'application/json'
       },

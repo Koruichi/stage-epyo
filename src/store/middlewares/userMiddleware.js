@@ -11,7 +11,7 @@ const userMiddleware = (store) => (next) => (action) => {
     });
     var config = {
       method: 'post',
-      url: 'http://127.0.0.1:3333/login',
+      url: 'http://10.0.4.4:3333/login',
       headers: {
         'Content-Type': 'application/json',
       },
@@ -42,7 +42,7 @@ const userMiddleware = (store) => (next) => (action) => {
     });
     var config = {
       method: 'get',
-      url: 'http://127.0.0.1:3333/users',
+      url: 'http://10.0.4.4:3333/users',
       headers: {
         'Content-Type': 'application/json'
       },
@@ -103,7 +103,7 @@ const userMiddleware = (store) => (next) => (action) => {
     });
     var config = {
       method: 'post',
-      url: 'http://127.0.0.1:3333/register',
+      url: 'http://10.0.4.4:3333/register',
       headers: {
         'Content-Type': 'application/json',
       },
@@ -139,7 +139,7 @@ const userMiddleware = (store) => (next) => (action) => {
     }
     var config = {
       method: 'post',
-      url: `http://127.0.0.1:3333/user/${action.email}`,
+      url: `http://10.0.4.4:3333/user/${action.email}`,
       headers: {
         'Content-Type': 'application/json'
       },

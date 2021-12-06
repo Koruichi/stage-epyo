@@ -32,7 +32,8 @@ app.get('/', (req, res) => {
   // getter
   localStorage.getItem('myData');
 
-  // removelocalStorage.removeItem('myData');
+  // remove
+  localStorage.removeItem('myData');
 
   // remove all
   localStorage.clear();
@@ -145,7 +146,7 @@ app.get('/export/:id', (req, res) => {
         WMS_Allées: e.wms_allees,
         WMS_Colonnes: e.wms_colonnes,
         WMS_Niveaux: e.wms_niveaux,
-        WMS_Emplacements: e.wms_emplacements       
+        WMS_Emplacements: e.wms_emplacements
       }
     }),
       res.send(detailExport);

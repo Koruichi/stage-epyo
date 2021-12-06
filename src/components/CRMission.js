@@ -13,6 +13,9 @@ import { NavLink } from 'react-router-dom'
 import './styles/Print.scss'
 import Export from './Export';
 import WMSStock from './WMSStock';
+//import Photo from '{currentProduct.emplacements}';
+// import Photo from '../photos_src/KO/1E-06-26D-00.jpg';
+//const picture = (await import('../photos_src/KO/'+ currentProduct.emplacements + '.jpg'));
 
 const CRMission = ({ putStatutIntoState, getInventory, detailData, currentProduct, changeFullscreen, getEverythingFromWms, toggleExportOption, exportOption, wmsDetails, toggleWmsDetails }) => {
   useEffect(() => {
@@ -61,6 +64,8 @@ const CRMission = ({ putStatutIntoState, getInventory, detailData, currentProduc
                 <div className='partiePhoto'>
                   <TransformWrapper> <TransformComponent>
                     < img className="photo" src={currentProduct.photo} />
+                    {/* < img className="photo" src={'/photos_comp/KO/'+ currentProduct.emplacements+".jpg"} /> */}
+                    {/* < img className="photo" src={import('../photos_src/KO/'+ currentProduct.emplacements + '.jpg')} />  */}
                   </TransformComponent></TransformWrapper>
                 </div>
               </div>

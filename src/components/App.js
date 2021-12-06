@@ -12,6 +12,7 @@ import Photo from './Photo';
 import InventoryProgram from'./InventoryProgram';
 import DDHistoryInventory from './DDHistoryInventory';
 
+
 const App = () => {
   const isConnected = localStorage.getItem('isConnected') === 'true';
   return (
@@ -48,7 +49,6 @@ const App = () => {
         <Route exact path="/inventoryProgram">
           <InventoryProgram/>
         </Route>
-
 
       </Switch>
     </div>

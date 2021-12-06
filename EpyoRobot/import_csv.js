@@ -12,7 +12,7 @@ const connection = mysql.createConnection({
 });
 
 // lien vers le csv
-let stream = fs.createReadStream("data/csv_historique.csv");
+let stream = fs.createReadStream("data/csv_stock.csv");
 let csvData = [];
 let csvStream = fastcsv
   .parse()
@@ -30,7 +30,7 @@ let csvStream = fastcsv
       } else {
         // requete SQL
         let query =
-          "INSERT INTO `historique_inventaire`(`date`, `nom_inventaire`, `types`, `template`, `detail`, `recurrence`, `statut_ip`) VALUES ?";
+          "INSERT INTO stock (quantite, cab_constate, produit_id, inventaire_id, localisation_id, diag_id, statut_id, photo) VALUES ?";
           connection.query(query, [csvData], (error, response) => {
           console.log(error || response);
         });

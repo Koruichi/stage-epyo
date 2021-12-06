@@ -18,6 +18,7 @@ import { Popup } from 'semantic-ui-react'
 import Calculs from './Calculs';
 import DetailData from './DetailData';
 import { NavLink } from 'react-router-dom'
+import ContenuMission from './ContenuMission';
 
 const Robot = ({ whichInventoryIsSelected, detailData, changeFullscreen }) => {
   return (
@@ -39,7 +40,7 @@ const Robot = ({ whichInventoryIsSelected, detailData, changeFullscreen }) => {
             <NavLink onClick={() => changeFullscreen()} to="/HistoryInventory"><img src={fullscreen} className="iFullscreen" width="80" height="80" /></NavLink>
             <NavLink onClick={() => changeFullscreen()} to="/inventoryDetails"><img src={fullscreen} className="iFullscreen" width="80" height="80" /></NavLink>
           </div>
-          <DetailData />
+          <ContenuMission />
         </div>
       </div>
       {whichInventoryIsSelected !== "" ?
