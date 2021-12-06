@@ -1,0 +1,44 @@
+version: 
+   '3.4'
+services:
+  epyo-robot-db:
+    container_name: epyo-robot-db
+    hostname:  epyo-robot-db
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    volumes:
+      - vol-db-data:/var/lib/mysql
+    ports:
+        - '127.0.0.1:3306:3306'
+    environment:
+        - MYSQL_DATABASE=epyo-robot
+        - MYSQL_ROOT_PASSWORD=epyoepyo666
+    restart: always
+  
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+        - '127.0.0.1:8080:80'
+    environment:
+        - PMA_HOST=epyo-robot-db
+        - PMA_ARBITRARY=1
+    restart: always
+
+  epyo-server:
+    container_name: epyo-server
+    image: node:14.16.0-alpine3.13
+    restart: always
+    volumes:
+      - .:/home
+    working_dir: /home
+    command: node index.js
+    ports:
+      - 3333:3333
+    depends_on:
+      - epyo-robot-db
+
+volumes:
+  vol-db-data:
+    driver: local

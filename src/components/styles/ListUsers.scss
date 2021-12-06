@@ -1,0 +1,28 @@
+.listUsers p {
+  margin: 0.8em; 
+}
+
+.eachUser{
+  display: flex;
+  align-items: center;;
+  border: 1px solid #c9cbce;
+  margin-top: 10px; 
+}
+
+.eachUser p {
+  text-align: center;
+  flex-direction: column;
+} 
+
+#select {
+  width: 212px;
+  margin-bottom: 0.5em;
+  padding: 1em;
+  border: 1px solid #556fe4;
+  background-color : white;
+  outline:  none;
+}
+
+.headerUser{
+  display: flex;
+}

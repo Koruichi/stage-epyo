@@ -1,0 +1,122 @@
+.CR{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    height: 50px;
+    width: 80%;
+    background-color: #dae3f3;
+    border: 1px solid white; 
+    margin-left: 2em;
+}
+
+.submitBtnCariste{
+    display: inline;
+    margin: 0.5em; 
+    background-color : #fbe5d6;
+    color: rgb(75, 74, 74);
+    border: 2px solid #556fe4;
+    width: 125px;
+    height: 100px;
+    font-size: 1.25em;
+  }
+
+  .submitBtnWMS{
+    display: inline;
+    margin: 0.5em; 
+    background-color : #dae3f3;
+    color: rgb(75, 74, 74);
+    border: 2px solid #556fe4;;
+    width: 125px;
+    height: 100px;
+    font-size: 1.25em;
+  }
+
+  .submitBtnValider{
+    display: inline;
+    margin: 0.5em; 
+    background-color : #e2f0d9;
+    color:rgb(75, 74, 74);
+    border: 2px solid #556fe4;;
+    width: 125px;
+    height: 50px;
+    font-size: 1.25em;
+    margin-top: 2em;
+  }
+
+h2{
+    margin: 0;
+    text-align: center;
+    height: 50px;
+    background-color: #dae3f3;
+    border: 1px solid white; 
+    vertical-align: middle;     
+}
+
+.detailWMS{
+    position: relative;
+    background-color: white;
+    margin-left: 2em;
+}
+
+.photo{
+    height: 500px;
+    width: 100%;
+    background-color: white;
+    border: 1px solid white; 
+    text-align: center;
+}
+
+.details{
+    display: flex; 
+    margin-left: 2em; 
+}
+
+.partie {
+    text-align: left;
+    margin-left: 2em;
+    width: 26%;
+}
+
+.stock{
+    float: right;
+    margin: 0;  
+}
+
+.titlePhoto{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    text-align: center;
+    height: 50px;
+    background-color: #dae3f3;
+    border: 1px solid white; 
+    vertical-align: middle;     
+}
+
+.partiePhoto {
+    display: flex;
+    justify-content: center;
+}
+
+.buttonAction {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.imgFullscreen{
+    position: absolute;
+	top: -27px; 
+    margin-right: 2em;
+    margin-left : -70px;
+}
+
+.imgFullscreenphoto{
+    margin-right: 2em;
+}
+
+.photoFull{
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}

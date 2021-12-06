@@ -1,0 +1,49 @@
+.inputArea{
+  width: 200px;
+  margin: auto  1em;
+  margin-bottom: 0.5em;
+  height: 30px;
+  border: 1px solid #556fe4
+}
+
+#role-select {
+  width: 212px;
+  margin-bottom: 0.5em;
+  padding: 1em;
+  border: 1px solid #556fe4;
+  background-color : white;
+  outline:  none;
+  margin-left: 1em;
+}
+
+.textLogin {
+  margin-top: 1em;
+  margin-left: 3em;
+}
+
+.registerUser{
+  position: relative;
+  height: 75px; 
+  width: 75px; 
+  background-color: white;
+  border: 1px solid #556fe4;
+  border-radius: 50%; 
+  margin:auto;
+  margin-top: 10px
+}
+
+.registerUser span{
+  position: absolute; /* postulat de départ */
+  top: 50%; left: 50%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+}
+
+.userPart{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2em;
+}
+
+.registerPart{
+  width: 250px; 
+}
