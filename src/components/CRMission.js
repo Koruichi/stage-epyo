@@ -95,7 +95,6 @@ const CRMission = ({ putStatutIntoState, getInventory, detailData, currentProduc
   );
 };
 
-
 const mapStateToProps = (state) => ({
   detailData: state.detailData,
   currentProduct: state.currentProduct,

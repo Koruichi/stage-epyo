@@ -21,6 +21,7 @@ const initialState = {
   exportOption: false,
   wmsDetails: false,
   listUsers: [],
+  historyInventory: [],
 };
 
 const reducer = (oldState = initialState, action) => {
@@ -156,6 +157,13 @@ const reducer = (oldState = initialState, action) => {
       return {
         ...oldState,
         wmsDetails: action.value
+      }
+    }
+
+    case 'PUT_HISTORY': {
+      return {
+        ...oldState,
+        historyInventory: action.value
       }
     }
 

@@ -9,6 +9,9 @@ import Register from './Register';
 import CRMission from './CRMission';
 import InventoryDetails from './InventoryDetails';
 import Photo from './Photo';
+import InventoryProgram from'./InventoryProgram';
+import DDHistoryInventory from './DDHistoryInventory';
+
 
 const App = () => {
   const isConnected = localStorage.getItem('isConnected') === 'true';
@@ -39,7 +42,12 @@ const App = () => {
           <Photo />
         </Route>
 
-        <Route>
+        <Route exact path="/HistoryInventory">
+          <DDHistoryInventory/>
+        </Route>
+        
+        <Route exact path="/inventoryProgram">
+          <InventoryProgram/>
         </Route>
 
       </Switch>

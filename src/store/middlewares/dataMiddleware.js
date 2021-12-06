@@ -177,6 +177,27 @@ const dataMiddleware = (store) => (next) => (action) => {
     }
   }
 
+  else if (action.type === 'GET_HISTORY') {
+    var data = JSON.stringify({
+    });
+    var config = {
+      method: 'get',
+      url: 'http://127.0.0.1:3333/history',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      data: data
+    };
+    axios(config)
+      .then(function (response) {
+        console.log(JSON.stringify(response.data));
+        store.dispatch({ type: 'PUT_HISTORY', value: response.data })
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
   else {
     next(action)
   }

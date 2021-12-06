@@ -37,6 +37,7 @@ const Robot = ({ whichInventoryIsSelected, detailData, changeFullscreen }) => {
           <div className="separateElements">
             <img src={cycle} width="50" height="50" />
             <h1> Contenu de la mission </h1>
+            <NavLink onClick={() => changeFullscreen()} to="/HistoryInventory"><img src={fullscreen} className="iFullscreen" width="80" height="80" /></NavLink>
             <NavLink onClick={() => changeFullscreen()} to="/inventoryDetails"><img src={fullscreen} className="iFullscreen" width="80" height="80" /></NavLink>
           </div>
           <ContenuMission />

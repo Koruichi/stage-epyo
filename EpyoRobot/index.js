@@ -14,6 +14,7 @@ const PORT = 3333;
 const HOST = '0.0.0.0';
 var crypto = require('crypto');
 const { Console } = require('console');
+const { types } = require('util');
 // App
 const app = express();
 app.use(express.json())
@@ -81,6 +82,21 @@ app.post('/register', (req, res) => {
 
 app.get('/users', (req, res) => {
   con.query('SELECT email, username, role, statut FROM `user`', function (err, result, fields) {
+    if (err) throw err;
+    res.send(result);
+    // error will be an Error if one occurred during the query
+    // results will contain the results of the query
+    // fields will contain information about the returned results fields (if any)
+  });
+})
+
+// Creation du get afin de faire tomber les infos de la BDD sur un tableau
+// en l'occurence la sur le tableau "Historique des inventaires"
+//fait par david ( aide de maxime)
+
+
+app.get('/history', (req, res) => {
+  con.query('SELECT `date`, `nom_inventaire`, `types`, `template`, `detail`, `recurrence`, `statut_ip` FROM `historique_inventaire`', function (err, result, fields) {
     if (err) throw err;
     res.send(result);
     // error will be an Error if one occurred during the query
