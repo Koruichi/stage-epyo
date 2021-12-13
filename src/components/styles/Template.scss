@@ -1,0 +1,65 @@
+.containerA{
+  width: 200px;
+}
+
+.containerB{
+ 
+  width: 200px;
+}
+
+.containerC{
+
+  width: 200px;
+}
+
+.containerD{
+  
+  width: 200px;
+}
+
+.containerE{
+ 
+  width: 200px;
+}
+
+.selectionner{
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: large;
+  padding: 10px;
+  background-color: green;
+  color: white;
+  width: 150px;
+  position: absolute;
+  top: 850px;
+  left: 300px;
+}
+
+.annuler{
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: large;
+  padding: 10px;
+  background-color: red;
+  color: white;
+  width: 150px;
+  position: absolute;
+  top: 850px;
+  left: 500px;
+}
+
+.titreTemplate{
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  background-color: #dae3f3;
+  border: 1px solid white; 
+  padding-left: 10em;
+}
+.popUpTemplate{
+  position: absolute; /* postulat de départ */
+  top: 50%; left: 50%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%); 
+  background-color: white;
+  border: 5px solid #71b6f3;
+}
