@@ -182,7 +182,7 @@ const dataMiddleware = (store) => (next) => (action) => {
     });
     var config = {
       method: 'get',
-      url: 'http://127.0.0.1:3333/history',
+      url: 'http://10.0.4.4:3333/history',
       headers: {
         'Content-Type': 'application/json'
       },

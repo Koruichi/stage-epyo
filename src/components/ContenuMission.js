@@ -24,7 +24,6 @@ const ContenuMission = ({ detailData, showThisProduct, currentProduct, isItFulls
           <p onClick={() => sortOurData("emplacements")} style={{ width: '250px', 'fontWeight': 'bold', cursor: 'pointer' }}>
             <div className="filter">Emplacements<span style={{ marginLeft: '5px' }}> {whatFilteredis.includes('emplacements') ? whatFilteredis === 'emplacements' ? <FaArrowUp /> : <FaArrowDown /> : ''} </span></div></p>
         </li>
-        <p>TEST MAX</p>
       </ul>
       <ul className={isItFullscreen ? "listInventory fullscreen" : "listInventory"}>
         {detailData.length > 0 ?
