@@ -11,10 +11,11 @@ const DetailData = ({ detailData, showThisProduct, currentProduct, isItFullscree
     <div className={exportOption ? 'exportOptionIsOn' : ''}>
       <ul className="navHeaderDD">
         <li className="eachList">
+
           <p onClick={() => sortOurData("date_debut")} style={{ width: '50px', 'fontWeight': 'bold', cursor: 'pointer' }}>
             <div className="filter">Date<span style={{ marginLeft: '5px' }}> {whatFilteredis.includes('date_debut') ? whatFilteredis === 'date_debut' ? <FaArrowUp /> : <FaArrowDown /> : ''} </span></div></p>
           
-          <p onClick={() => sortOurData("zones")} style={{ width: '50px', 'fontWeight': 'bold' }}>
+          <p onClick={() => sortOurData("zones")} style={{ width: '50px', 'fontWeight': 'bold', cursor: 'pointer' }}>
            <div className="filter"> Zone<span style={{ marginLeft: '5px' }}> {whatFilteredis.includes('zones') ? whatFilteredis === 'zones' ? <FaArrowUp /> : <FaArrowDown /> : ''} </span> </div></p>
          
           <p onClick={() => sortOurData("cellules")} style={{ width: '50px', 'fontWeight': 'bold', cursor: 'pointer' }}>
@@ -49,17 +50,18 @@ const DetailData = ({ detailData, showThisProduct, currentProduct, isItFullscree
           
           <p onClick={() => sortOurData("diagnostique")} style={{ width: '150px', 'fontWeight': 'bold', cursor: 'pointer' }}>
             <div className="filter">Diagnostique<span style={{ marginLeft: '5px' }}> {whatFilteredis.includes('diagnostique') ? whatFilteredis === 'diagnostique' ? <FaArrowUp /> : <FaArrowDown /> : ''} </span></div></p>
+        
         </li>
       </ul>
       <ul className={isItFullscreen ? "listInventory fullscreen" : "listInventory"}>
         {detailData.length > 0 ?
           detailData.map((e, i) => {
             return (
-              <li ref={(e) => itemEls.current[i] = e} style={{ cursor: 'pointer' }} onClick={() => showThisProduct(e)} className={currentProduct.id_produit === e.id_produit ? 'eachList current' : 'eachList'} key={e.id}>
-                <p style={{ width: '150px' }}> {e.date_debut.split('-')[2].slice(0, 2) + '/' + e.date_debut.split('-')[1] + '/' + e.date_debut.split('-')[0]}</p>
-                <p style={{ width: '40px' }}> {e.zones}</p>
-                <p style={{ width: '50px' }}> {e.allees}</p>
+              <li ref={(e) => itemEls.current[i] = e} style={{ cursor: 'pointer' }}  className={currentProduct.id_produit === e.id_produit ? 'eachList current' : 'eachList'} key={e.id}>
+                <p style={{ width: '50px' }}> {e.date_debut.split('-')[2].slice(0, 2) + '/' + e.date_debut.split('-')[1] + '/' + e.date_debut.split('-')[0]}</p>
+                <p style={{ width: '50px' }}> {e.zones}</p>
                 <p style={{ width: '50px' }}> {e.cellules}</p>
+                <p style={{ width: '50px' }}> {e.allees}</p>
                 <p style={{ width: '65px' }}> {e.colonnes}</p>
                 <p style={{ width: '50px' }}> {e.niveaux}</p>
                 <p style={{ width: '100px' }}> {e.emplacements}</p>
@@ -67,7 +69,7 @@ const DetailData = ({ detailData, showThisProduct, currentProduct, isItFullscree
                 <p style={{ width: '150px' }}> {e.cab_constate}</p>
                 <p style={{ width: '150px' }}> {e.reference}</p>
                 <p style={{ width: '200px' }}> {e.designation}</p>
-                <p style={{ width: '90px' }} className={e.statut}> {e.statut}</p>
+                <p style={{ width: '150px' }} className={e.statut}> {e.statut}</p>
                 <p style={{ width: '150px' }}> {e.diagnostique}</p>
               </li>
             )

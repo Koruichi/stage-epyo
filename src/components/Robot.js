@@ -4,7 +4,10 @@ import Navigation from './Navigation';
 import Header from './Header';
 import campagnes from './img/campagnes.png';
 import fullscreen from './img/fullscreen.png';
+import time from './img/time.png';
+import timelight from './img/timelight.png';
 import cycle from './img/cycle.png';
+import sendfile from './img/sendfile.png';
 import selectmission from './img/selectmission.png';
 import novisit from './img/novisit.png';
 import errorrobot from './img/errorrobot.png';
@@ -19,8 +22,11 @@ import Calculs from './Calculs';
 import DetailData from './DetailData';
 import { NavLink } from 'react-router-dom'
 import ContenuMission from './ContenuMission';
+import Export from './Export';
+import Template from './Template';
 
-const Robot = ({ whichInventoryIsSelected, detailData, changeFullscreen }) => {
+const Robot = ({ whichInventoryIsSelected, detailData, changeFullscreen, toggleTemplateOption, templateOption, toggleExportOption, exportOption }) => {
+  
   return (
     <>
       <Header />
@@ -35,10 +41,13 @@ const Robot = ({ whichInventoryIsSelected, detailData, changeFullscreen }) => {
         </div>
         <div className="contentMission">
           <div className="separateElements">
-            <img src={cycle} width="50" height="50" />
+            <img src={cycle} onClick={() => toggleTemplateOption(!templateOption)} width="50" height="50" style={{ marginRight: "2em", cursor: 'pointer' }}></img>
+
+            <img src={sendfile} onClick={() => toggleExportOption(!exportOption)} width="50" height="50" style={{ marginRight: "2em", cursor: 'pointer' }}></img>
             <h1> Contenu de la mission </h1>
-            {/* <NavLink onClick={() => changeFullscreen()} to="/HistoryInventory"><img src={fullscreen} className="iFullscreen" width="80" height="80" /></NavLink> */}
-            <NavLink onClick={() => changeFullscreen()} to="/inventoryDetails"><img src={fullscreen} className="iFullscreen" width="80" height="80" /></NavLink>
+            <NavLink to="/HistoryInventory"><img src={time} className="iTime"/></NavLink>
+            <NavLink to="/inventoryProgram"><img src={timelight} className="iTime"/></NavLink>
+            <NavLink onClick={() => changeFullscreen()} to="/inventoryDetails"><img src={fullscreen} className="iFullscreen"/></NavLink>
           </div>
           <ContenuMission />
         </div>
@@ -60,18 +69,29 @@ const Robot = ({ whichInventoryIsSelected, detailData, changeFullscreen }) => {
           </NavLink>
         </>
         : ""}
+        {exportOption ? <Export /> : ""}
+        {templateOption ? <Template /> : ""}
     </>
   );
 };
 
+
 const mapStateToProps = (state) => ({
   whichInventoryIsSelected: state.whichInventoryIsSelected,
+  exportOption: state.exportOption,
+  templateOption: state.templateOption,
   detailData: state.detailData
 });
 
 const mapDispatchToProps = (dispatch) => ({
   changeFullscreen: () => {
     dispatch({ type: 'CHANGE_FULLSCREEN' })
+  },
+  toggleExportOption: (value) => {
+    dispatch({ type: 'EXPORT', value: value })
+  },
+  toggleTemplateOption: (value) => {
+    dispatch({ type: 'TEMPLATE', value: value })
   }
 });
 
