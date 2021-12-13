@@ -19,6 +19,7 @@ const initialState = {
   dataFilteredForExcel: [],
   tableaudeFiltre: [],
   exportOption: false,
+  templateOption: false,
   wmsDetails: false,
   listUsers: [],
   historyInventory: [],
@@ -73,6 +74,7 @@ const reducer = (oldState = initialState, action) => {
         whatFilteredis: action.whatfilteredis
       }
     }
+    
 
     case 'PUT_INVENTORIES_INTO_STATE': {
       return {
@@ -138,6 +140,13 @@ const reducer = (oldState = initialState, action) => {
       }
     }
 
+    case 'TEMPLATE': {
+      return {
+        ...oldState,
+        templateOption: action.value
+      }
+    }
+
     case 'PUT_USERS': {
       return {
         ...oldState,
@@ -164,6 +173,13 @@ const reducer = (oldState = initialState, action) => {
       return {
         ...oldState,
         historyInventory: action.value
+      }
+    }
+    case 'PUT_HISTORY_FILTERED': {
+      return {
+        ...oldState,
+        historyInventory: action.value,
+        whatFilteredis: action.whatfilteredis
       }
     }
 

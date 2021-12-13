@@ -182,7 +182,7 @@ const dataMiddleware = (store) => (next) => (action) => {
     });
     var config = {
       method: 'get',
-      url: 'http://127.0.0.1:3333/history',
+      url: 'http://10.0.4.4:3333/history',
       headers: {
         'Content-Type': 'application/json'
       },
@@ -197,6 +197,44 @@ const dataMiddleware = (store) => (next) => (action) => {
         console.log(error);
       });
   }
+
+
+  else if (action.type === 'SORT_OUR_HISTORY') {
+    let isItDescending = ''
+    var mapped = state.historyInventory.map(function (e) {
+      return {
+        ...e,
+        [action.value.toLowerCase()]: e[action.value.toLowerCase()]
+      };
+    })
+    if (state.whatFilteredis === action.value) {
+      isItDescending = "d"
+      mapped.sort(function (a, b) {
+        if (a[action.value.toLowerCase()] < b[action.value.toLowerCase()]) {
+          return 1;
+        }
+        if (a[action.value.toLowerCase()] > b[action.value.toLowerCase()]) {
+          return -1;
+        }
+        return 0;
+      });
+    } else {
+      // on trie l'objet temporaire avec les valeurs réduites /
+      mapped.sort(function (a, b) {
+        if (a[action.value.toLowerCase()] > b[action.value.toLowerCase()]) {
+          return 1;
+        }
+        if (a[action.value.toLowerCase()] < b[action.value.toLowerCase()]) {
+          return -1;
+        }
+        return 0;
+      });
+    }
+    store.dispatch({ type: 'PUT_HISTORY_FILTERED', value: mapped, whatfilteredis: action.value.toLowerCase() + isItDescending })
+    // on utilise un objet final pour les résultats
+  }
+
+  
 
   else {
     next(action)

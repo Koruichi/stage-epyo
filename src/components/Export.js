@@ -13,7 +13,8 @@ const DetailExport = ({ detailExport, filterStatut, dataFilteredForExcel, toggle
     return (
         <>
             <div className="centerPerfectly">
-                <h1 className="CR"><img src={sendfile} width="50" height="50" /> Rapport d'erreurs - Export <div onClick={() => toggleExportOption(!exportOption)}><div className="croix" style={{ cursor: 'pointer' }}><IoCloseSharp size='1.5em' /></div></div> </h1>
+                <h1 className="CR"><img src={sendfile} width="50" height="50" /> Rapport d'erreurs - Export 
+                <div onClick={() => toggleExportOption(!exportOption)}><div className="croix" style={{ cursor: 'pointer' }}><IoCloseSharp size='1.5em' /></div></div> </h1>
                 <div style={{ display: 'flex', border: '1px solid #dae3f3', width: '700px', margin: 'auto', backgroundColor: 'white' }}>
                     <div className="checkboxStatut">
                         <CheckboxGroup onChange={onCheckboxChange}>

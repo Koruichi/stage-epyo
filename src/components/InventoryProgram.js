@@ -4,6 +4,7 @@ import Navigation from './Navigation';
 import Header from './Header';
 import duplicate from './img/duplicate.png';
 import errorrobot from './img/errorrobot.png';
+import cycle  from './img/cycle.png';
 import sendfile from './img/sendfile.png';
 import stock from './img/stock.png';
 import DetailData from './DetailData';
@@ -14,8 +15,9 @@ import './styles/Print.scss'
 import Export from './Export';
 import WMSStock from './WMSStock';
 import DetailDataHistoryInventory from './DetailDataHistoryInventory';
+import Template from './Template';
 
-const InventoryProgram = ({ putStatutIntoState, getInventory, detailData, currentProduct, changeFullscreen, getEverythingFromWms, toggleExportOption, exportOption, wmsDetails, toggleWmsDetails }) => {
+const InventoryProgram = ({ putStatutIntoState, getInventory, detailData, currentProduct, changeFullscreen, getEverythingFromWms, toggleExportOption, exportOption, wmsDetails, toggleWmsDetails,templateOption,toggleTemplateOption }) => {
   useEffect(() => {
     getInventory()
   }, [])
@@ -28,8 +30,9 @@ const InventoryProgram = ({ putStatutIntoState, getInventory, detailData, curren
         <img src={errorrobot} width="50" height="50" color="black">
         </img> Inventaires Programmés 
                 <div className="images">
-                <img src={duplicate} className="imgFullscreen" width="50" height="50" style={{ marginTop: "0.8em", cursor: 'pointer' }}>
-                 </img>
+                <img src={duplicate} className="imgFullscreen" width="50" height="50" style={{ marginTop: "0.8em", cursor: 'pointer' }}></img>
+              <img src={cycle} onClick={() => toggleTemplateOption(!templateOption)} width="50" height="50" style={{ marginRight: "2em", cursor: 'pointer' }}></img>
+
                   <NavLink onClick={() => changeFullscreen()} to="/inventoryDetails"> 
                   <img src={sendfile} onClick={() => toggleExportOption(!exportOption)} width="50" height="50" style={{ marginRight: "2em", cursor: 'pointer' }}>
                 </img>
@@ -38,6 +41,7 @@ const InventoryProgram = ({ putStatutIntoState, getInventory, detailData, curren
                   </div>
         </h1>
         <DetailDataHistoryInventory />
+        {templateOption ? <Template /> : ""}
    
       </div>
 
@@ -48,8 +52,8 @@ const InventoryProgram = ({ putStatutIntoState, getInventory, detailData, curren
 const mapStateToProps = (state) => ({
   detailData: state.detailData,
   currentProduct: state.currentProduct,
-  exportOption: state.exportOption,
-  wmsDetails: state.wmsDetails,
+  templateOption: state.templateOption,
+  wmsDetails: state.wmsDetails
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -65,8 +69,8 @@ const mapDispatchToProps = (dispatch) => ({
   changeFullscreen: () => {
     dispatch({ type: 'CHANGE_FULLSCREEN' })
   },
-  toggleExportOption: (value) => {
-    dispatch({ type: 'EXPORT', value: value })
+  toggleTemplateOption: (value) => {
+    dispatch({ type: 'TEMPLATE', value: value })
   },
   toggleWmsDetails: (value) => {
     dispatch({ type: 'WMS_DETAILS', value: value })
